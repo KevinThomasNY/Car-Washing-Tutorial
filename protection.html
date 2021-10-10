@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>Protection</title>
+</head>
+
+<body>
+
+	<div class="navigation">
+		<div class="flex-container">
+			<div class="logo">
+				<h1>Protection</h1>
+			</div>
+			<div class="nav-bar">
+				<ul>
+					<li> <a class="cool-link" href="index.html">Home</a></li>
+					<li> <a class="cool-link" href="wheel.html">Wheels</a></li>
+					<li> <a class="cool-link" href="paint.html">Paint</a></li>
+					<li> <a class="cool-link" href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="hero3">
+		<div class="info">
+			<h1>Learn how to apply protection<br> to paint </h1>
+			<p>Give your car the protection it needs</p>
+			<a class="cta" href="#img">Get Started</a>
+		</div>
+	</section>
+	<section id="img" class="showcase">
+		<h2>3 EASY STEPS</h2>
+		<div class="showcase-container">
+			<div class="wash">
+				<p>Apply Paint Prep First</p>
+			</div>
+			<img id="myImg1" class="wash-img" src="/img/image 7.png" alt="Paint Prep">
+			<img id="myImg2" class="clay-img border" src="/img/image 8.png" alt="Coating">
+			<div class="clay">
+				<p>Use Protection Of Choice</p>
+			</div>
+			<div class="protection">
+				<p>After Haze Buff Dry</p>
+			</div>
+			<img id="myImg3" src="/img/image 9.png" alt="Buff Dry" class="protection-img">
+		</div>
+	</section>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img01">
+
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+	<section class="steps">
+		<div class="step1">
+			<div class="step-container">
+				<h1>Step 1</h1>
+				<p> Use a paint prep is key it ensure a clean surface for the protection to bond too. One example is
+					carpro eraser. Also the paint prep will get rid of any polish residue.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 1.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step2">
+			<div class="step-container">
+				<h1>Step 2</h1>
+				<p>Spray sealants are the easiest to apply. Just use 1-2 sprays per panal and spread product on entire
+					surface. Wax is also simple. Remember not you use too much of any product because it is wasting it
+					not
+					addding more protection. Coating takes more skill. With coating make sure you 'level the product'.
+					That just means even coverage and no high spots. Just take your time.
+				</p>
+				<div class="p2">
+					<img src="/img/Polygon 2.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step3">
+			<div class="step-container">
+				<h1>Step 3</h1>
+				<p>Use a clean microfiber towel to buff off the residue. You want to get the excess product out not
+					remove the entire thing. Make sure to flip towel many times during the process. Read manufactuer
+					instructions about the protections exposure to water. Some products require 24 hours of no rain.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-text">
+			<h1>Any Questions?</h1>
+			<a class='cta' href="contact.html">Click Here</a>
+			<div class="ship">
+				<img src="img/312461-ff0044.svg" alt="">
+			</div>
+		</div>
+	</footer>
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img1 = document.getElementById("myImg1");
+		var img2 = document.getElementById("myImg2");
+		var img3 = document.getElementById("myImg3");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		window.addEventListener('click', outsideClick);
+		img1.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img2.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img3.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		//close modal 
+		function outsideClick(e) {
+			if (e.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+
+</html>

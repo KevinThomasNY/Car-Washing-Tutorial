@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>Wheel</title>
+</head>
+
+<body>
+	<div class="navigation">
+		<div class="flex-container">
+			<div class="logo">
+				<h1>Wheels</h1>
+			</div>
+			<div class="nav-bar">
+				<ul>
+					<li> <a class="cool-link" href="index.html">Home</a></li>
+					<li> <a class="cool-link" href="paint.html">Paint</a></li>
+					<li> <a class="cool-link" href="protection.html">Protection</a></li>
+					<li> <a class="cool-link" href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="hero">
+		<div class="info">
+			<h1>Learn how to detail <br> wheel and tires</h1>
+			<p>Cleaning the wheels first is always <br> recommened.</p>
+			<a class="cta" href="#img">Get Started</a>
+		</div>
+	</section>
+	<section id="img" class="showcase">
+		<h2>3 EASY STEPS</h2>
+		<div class="showcase-container">
+			<div class="wash">
+				<p>Wash Wheel & Tire First</p>
+			</div>
+			<img id="myImg1" class="wash-img" src="/img/image 1.png" alt="Wheel Wash">
+			<img id="myImg2" class="clay-img" src="/img/image 2.png" alt="Clay Bar">
+			<div class="clay">
+				<p>Clay Bar Each Rim</p>
+			</div>
+			<div class="protection">
+				<p>Add Protection</p>
+			</div>
+			<img id="myImg3" src="/img/image 3.png" alt="Protection" class="protection-img">
+		</div>
+	</section>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img01">
+
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+	<section class="steps">
+		<div class="step1">
+			<div class="step-container">
+				<h1>Step 1</h1>
+				<p> For wheels and tires it's best to use a dedicated product for the task. One example is P&S
+					Brake Buster. This is effective for both tires and rims. Furthermore, it can be used in spray
+					bottle,
+					pump sprayer, foamer, or foam cannon. The advantage of using foamer is better coverage and useing
+					less product. You will need along brush for the inside of the barrow. Another for the face of the
+					wheel and a stiff brush for the tires.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 1.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step2">
+			<div class="step-container">
+				<h1>Step 2</h1>
+				<p>After washing the wheels you will need to clay the wheel. Clay removes the embeded contamination not
+					removed by the cleaner. To begin use the same wheel cleaner from step one and rub the clay bar
+					left-right. (East-West) Not in circles because of chance of maring. You move the clay to another
+					section when you fell the surface getting smooter. You only clay when you will follow with some
+					sort of protection after.
+				</p>
+				<div class="p2">
+					<img src="/img/Polygon 2.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step3">
+			<div class="step-container">
+				<h1>Step 3</h1>
+				<p>Its up to you which sort of protection you use on your rims. Ceramic type protection last the longest
+					but is generaly the most expensive. A regular sealant should do the trick. Adding protection results
+					in
+					less brake dust accumlation. Also cleaning the wheels take less time in the future. Afterwards,
+					apply tire dressing to give a nice shine.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-text">
+			<h1>Move onto Paint</h1>
+			<a class='cta' href="paint.html">Click Here</a>
+			<div class="ship">
+				<img src="img/312461-ff0044.svg" alt="">
+			</div>
+		</div>
+	</footer>
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img1 = document.getElementById("myImg1");
+		var img2 = document.getElementById("myImg2");
+		var img3 = document.getElementById("myImg3");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		window.addEventListener('click', outsideClick);
+		img1.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img2.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img3.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		//close modal 
+		function outsideClick(e) {
+			if (e.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+
+</html>

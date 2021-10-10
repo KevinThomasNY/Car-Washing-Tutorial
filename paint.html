@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>Paint</title>
+</head>
+
+<body>
+	<div class="navigation">
+		<div class="flex-container">
+			<div class="logo">
+				<h1>Paint</h1>
+			</div>
+			<div class="nav-bar">
+				<ul>
+					<li> <a class="cool-link" href="index.html">Home</a></li>
+					<li> <a class="cool-link" href="wheel.html">Wheels</a></li>
+					<li> <a class="cool-link" href="protection.html">Protection</a></li>
+					<li> <a class="cool-link" href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="hero2">
+		<div class="info">
+			<h1>Learn how to detail <br> paint properly</h1>
+			<p>Cleaning the paint improperly can lead to scratches.</p>
+			<a class="cta" href="#img">Get Started</a>
+		</div>
+	</section>
+	<section id="img" class="showcase">
+		<h2>3 EASY STEPS</h2>
+		<div class="showcase-container">
+			<div class="wash">
+				<p>Wash Paint First</p>
+			</div>
+			<img id="myImg1" class="wash-img" src="/img/image 4.png" alt="Paint Wash">
+			<img id="myImg2" class="clay-img" src="/img/image 5.png" alt="Clay Bar">
+			<div class="clay">
+				<p>Clay Bar The Surface</p>
+			</div>
+			<div class="protection">
+				<p>Dry Car</p>
+			</div>
+			<img id="myImg3" src="/img/image 6.png" alt="Car Drying" class="protection-img">
+		</div>
+	</section>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img01">
+
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+	<section class="steps">
+		<div class="step1">
+			<div class="step-container">
+				<h1>Step 1</h1>
+				<p> For the paint use a dedicated soap. Paint soaps are ph neutral which means it won't strip away are
+					cars surface. Some soaps even have wax included to give the surface extra protect. Thought the
+					protection won't last long it's still helpful. Aways start at the top of the cars surface and leave
+					the bottom for last(bottom has more dirt). Many people use wash mitts, however, wash mops allow you
+					the reach the top of SUVS and lower portions without bending.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 1.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step2">
+			<div class="step-container">
+				<h1>Step 2</h1>
+				<p>After washing the paint surface you will need to clay. Clay removes the embeded contamination not
+					removed by the soap. To begin use the same soap cleaner from step one and rub the clay bar
+					left-right. (East-West) Not in circles because of chance of maring. You move the clay to another
+					section when you fell the surface getting smooter. You only clay when you will follow with some
+					sort of protection after. Optional use iron remover before clay bar. Clay bars come in many forms,
+					pick the one you like the best.
+				</p>
+				<div class="p2">
+					<img src="/img/Polygon 2.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step3">
+			<div class="step-container">
+				<h1>Step 3</h1>
+				<p>Drying the car is important to prevent water spots. You can either use a towel with spray waz and
+					buff dry. Or use a leaf blower. The advantage of using a leaf blower is that it is touch less.
+					Therefore, no scratches.
+				</p>
+				<div class="p1">
+					<img src="./img/Polygon 3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-text">
+			<h1>Move onto Protection</h1>
+			<a class='cta' href="protection.html">Click Here</a>
+			<a class='cta oneB' href="two-bucket.html">More Info</a>
+			<div class="ship">
+				<img src="img/312461-ff0044.svg" alt="">
+			</div>
+		</div>
+	</footer>
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img1 = document.getElementById("myImg1");
+		var img2 = document.getElementById("myImg2");
+		var img3 = document.getElementById("myImg3");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		window.addEventListener('click', outsideClick);
+		img1.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img2.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+		img3.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		//close modal 
+		function outsideClick(e) {
+			if (e.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+
+</html>
